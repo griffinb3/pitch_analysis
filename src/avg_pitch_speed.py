@@ -1,4 +1,6 @@
 # Load the data from the Excel file
+from abc import abstractmethod
+from google.cloud import storage
 import pandas as pd
 
 df = pd.read_excel(r"C:\Users\griffyb3\cs128\2021_mlb_pitch_file.xlsx")
@@ -98,8 +100,13 @@ class AveragePitchSpeed:
 class PitchSpeedDifference:
 # want to find the difference in speeds between fastball and changeup
 # as well as fastball and curveball + fastball and slider
-    def compare_fb_cb:
-        #adding comments to commit and push
+
+    @staticmethod
+    def compare_fb_ch:
+        # adding comments to commit and push
+        # want to find the differnece between the fastball velo and changeup velo
+        # need to pull the changeup and fastball values for each team out of their values
+
 
 
 
