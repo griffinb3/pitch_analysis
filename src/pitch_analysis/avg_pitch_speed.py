@@ -1,7 +1,26 @@
 # Load the data from the Excel file
 from abc import abstractmethod
 from google.cloud import storage
+import json
+import os
 import pandas as pd
+
+# path = os.path.join(os.getcwd(), 'assignment-5-gcp-a25d09364c28.json')
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = path
+
+# create storage client variable
+# storage_client = storage.Client(path)
+
+# bucket = storage_client.get_bucket('cs128_bucket')
+
+# want to read the contents of this bucket
+# file = [filename.name for filename in list(bucket.list_blobs(prefix=''))]
+# print("Files present here are: ", file)
+
+# get our file
+# blob = bucket.blob(blob_name='2021_mlb_pitch_file_2.xlsx').download_as_string()
+# with open('local_dataset.xlsx', 'wb') as f:
+    # f.write(blob)
 
 
 class PitchAnalysis:
@@ -18,10 +37,26 @@ class PitchAnalysis:
         # For each team in the league, calculate average speed for the pitch given
         for name in self.team_list:
             pitch_list.append(
-                self.df[(self.df['team_name'] == name) & (self.df['pitch_type_name'] == pitch_type)]['avg_speed'].mean())
+                self.df[(self.df['team_name'] == name) & (self.df['pitch_type_name'] == pitch_type)][
+                    'avg_speed'].mean())
 
         team_speed_dict = dict(sorted(zip(self.team_list, pitch_list), key=lambda x: x[1], reverse=True))
         return team_speed_dict
+
+    """def avg_pitch_speed(self, pitch_type):
+        team_speed_list = []
+        # For each team in the league, calculate average speed for the pitch given
+        for name in self.team_list:
+            team_speed_list.append({
+                'team_name': name,
+                'avg_speed': self.df[(self.df['team_name'] == name) & (self.df['pitch_type_name'] == pitch_type)][
+                    'avg_speed'].mean()
+            })
+
+        # Sort the list of dictionaries based on average speed in descending order
+        team_speed_list = sorted(team_speed_list, key=lambda x: x['avg_speed'], reverse=True)
+
+        return team_speed_list"""
 
     def top_pitches(self, attribute1, attribute2, pitch_type):
         for attribute in [attribute1, attribute2]:
