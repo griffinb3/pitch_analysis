@@ -50,5 +50,3 @@ if __name__ == "__main__":
 
     # Calculate sum of standard deviations above the mean and display top players
     display_top_pitches(attribute_input1, attribute_input2, pitch_input, analysis)
-
-top_pitches_data.to_csv('stan_dev_results.csv', index=False)
