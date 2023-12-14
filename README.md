@@ -1,8 +1,8 @@
 # CS128: Assignment 5: Pitch Analysis
 
-## Liscence: 
+## Liscence: https://github.com/griffinb3/pitch_analysis/blob/main/LISCENSE.txt
 
-## Presentation Link: 
+## Presentation Link: https://docs.google.com/presentation/d/1d4uZwj1udZdOhrvFpFKEV5gTg-lNHqxg-vz_-1lbCKA/edit#slide=id.p
 
 ## Author: Griffin Brown, Daniel Patterson
 
