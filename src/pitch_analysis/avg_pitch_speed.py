@@ -1,8 +1,5 @@
 # Load the data from the Excel file
-from abc import abstractmethod
-from google.cloud import storage
-import json
-import os
+
 import pandas as pd
 
 # path = os.path.join(os.getcwd(), 'assignment-5-gcp-a25d09364c28.json')

@@ -1,8 +1,5 @@
 from avg_pitch_speed import PitchAnalysis
-from google.cloud import storage
-import json
-import os
-import pandas as pd
+
 
 
 # get our file
