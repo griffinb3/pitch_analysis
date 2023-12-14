@@ -32,7 +32,7 @@ def display_top_pitches(attribute1, attribute2, pitch_type, analysis):
 
 
 if __name__ == "__main__":
-    FILE_PATH = '../../2021_mlb_pitch_speed_2.xlsx'
+    FILE_PATH = '../../2021_mlb_pitch_file_2.xlsx'
     analysis = PitchAnalysis(FILE_PATH)
 
     # User input for the desired pitch type
