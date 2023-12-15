@@ -3,7 +3,6 @@
 import pandas as pd
 
 
-
 class PitchAnalysis:
     def __init__(self, file_path):
         self.df = pd.read_excel(file_path)  # Read data from Excel file
@@ -29,6 +28,8 @@ class PitchAnalysis:
 
 # Group data by team and pitch type, calculate average pitch velocity and spin rate
 # This was the initial code that I created. I asked ChatGPT to make it generic
+# StackOverflow gave me the answer on how to use the df[] tool to find a specific column in the data
+# https://stackoverflow.com/questions/65667918/python-dataframe-how-to-check-specific-columns-for-elements
 """def group_by_teams():
     for name in df['team_name'].unique():
         if name not in team_list:
@@ -108,7 +109,6 @@ class AveragePitchSpeed:
 """
 
 
-
 def top_pitches(self, attribute1, attribute2, pitch_type):
     for attribute in [attribute1, attribute2]:
         if attribute not in self.df.columns:
@@ -135,3 +135,9 @@ def top_pitches(self, attribute1, attribute2, pitch_type):
     top_players = pitch_df.nlargest(20, 'SumStdDevs')
 
     return top_players[[' first_name', 'last_name', attribute1, attribute2, 'SumStdDevs']]
+
+
+"""How to calculate mean and standard deviation using pd on an excel.
+Lines 31-34 in pitch_analysis_runner.py
+How to assertEquals an Excel Matrix in python using pd
+Line 36 in pitch_analysis_runner_tests.py"""
