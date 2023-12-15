@@ -14,3 +14,5 @@ In the baseball world, code like this is very useful for the team statisticians.
 
 Another potential usage could be for the coaching staff and front office. In the game of baseball, the higher the velocity a pitcher is able to throw pitches at, the better the pitch will be, especially in regards to the fastball. If front offices were able to identify players who were free agents or players looking to be traded that could increase their teams average pitch velocity, that may be very advantageous to creating a well-equiped pitching staff. There is always room for 'specialty' arms in the bullpen. Guys who were designed to face a select few batters, who have known weaknesses. The more guys that a front office is able to sign that have this unique ability, the better off the team could be.
 
+## Google Cloud Platform
+We were able to successfully run our code using Google Cloud PLatform. The results from our code are shown in the last slide of the presentation.
